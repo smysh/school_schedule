@@ -2,7 +2,7 @@ from school_schedule.cohort import Cohort
 from school_schedule.student import Student
 
 def test_initialization_with_students():
-    # Arrange
+    #Arrange
     claire = Student( 
             "Claire", 
             "freshman", 
@@ -14,6 +14,7 @@ def test_initialization_with_students():
                 "Earth Science" 
             ]
         )
+
     sylvia = Student( 
             "Sylvia", 
             "senior", 
@@ -24,6 +25,7 @@ def test_initialization_with_students():
                 "Gym"
             ]
         )
+
     # Act
     new_cohort = Cohort("Ocelots", [claire, sylvia])
 
@@ -33,8 +35,8 @@ def test_initialization_with_students():
     assert claire in new_cohort.student_list
     assert sylvia in new_cohort.student_list
 
-def test_add_student_to_cohort():
-    # Arrange
+def test_add_valid_student_to_cohort():
+    #Arrange
     claire = Student( 
             "Claire", 
             "freshman", 
@@ -46,6 +48,7 @@ def test_add_student_to_cohort():
                 "Earth Science" 
             ]
         )
+
     sylvia = Student( 
             "Sylvia", 
             "senior", 
@@ -56,6 +59,7 @@ def test_add_student_to_cohort():
                 "Gym"
             ]
         )
+    
     new_cohort = Cohort("Ocelots", [claire])
 
     # Act
